@@ -28,7 +28,7 @@ const Footer = () => {
     const getIcons = async () => {
 
         const res = axios.get('/api/links').then(res => {
-            setIcons(res.data)
+            setIcons(res.data.data)
         }).catch(err => console.log(err))
 
     }

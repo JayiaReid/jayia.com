@@ -26,8 +26,8 @@ const Contact = () => {
   const getVariables = async () => {
 
     const res = axios.get('/api/getEnvVar').then(res => {
-      console.log(res.data)
-      setVariables(res.data)
+      // console.log(res.data.data)
+      setVariables(res.data.data)
     }).catch(err => console.log(err))
   }
 

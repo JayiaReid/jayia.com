@@ -22,7 +22,7 @@ const ServiceCard = ({ title, id }) => {
   // get respective information from server
   useEffect(() => {
     const res = axios.get(`api/${id}`).then(res => {
-      setInfo(res.data)
+      setInfo(res.data.data)
     }).catch(err => console.log(err))
   }, [])
 
