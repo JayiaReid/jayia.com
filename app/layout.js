@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import StarsCanvas from "./_components/_/StarCanvas";
+import Nav from "./_components/Nav";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -21,8 +23,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className="bg-black"
       >
+        <Nav/>
+        {/*  fixed as screen background */}<StarsCanvas/>
         {children}
       </body>
     </html>
